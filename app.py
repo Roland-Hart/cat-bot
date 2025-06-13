@@ -34,3 +34,7 @@ def send_test_messages():
     )
 
     return "Test messages sent!"
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # Required for Render
+    app.run(host="0.0.0.0", port=port)
